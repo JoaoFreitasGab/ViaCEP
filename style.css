@@ -1,63 +1,72 @@
+/* Reset de padding e margin */
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+/* Estilo geral do formulário */
 form {
-    font-family: Verdana,Tahoma,sans-serif;
-    font-size: 15px;
-    background-color: #CC3300;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fff; /* Fundo branco */
     max-width: 500px;
-    
+    margin: 20px auto; /* Centraliza o formulário horizontalmente */
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd; /* Borda cinza clara */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+/* Estilo do título */
 h1 {
     margin-bottom: 20px;
-    margin-left: 20px;
-    color: #66FFFF;
-    text-shadow: 5px 5px 5px black;
+    color: #131921; /* Cor escura, semelhante ao header da Amazon */
+    font-size: 24px;
+    text-align: center;
 }
 
-input, textarea {
-    width: 200px;
-    padding: 10px;
-    color: black;
-    margin-left: 20px;
-    margin-top: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px solid;
-}
-
-input:hover, textarea:hover, input:focus, textarea:focus {
-    border-color: #000066;
-    box-shadow: 5px 0px 9px #FFFF00;
-    background-color: #66FFFF;
-    color: black;
-    font-weight: bold;
-}
-
-.enviar {
-    background-color: #66FFFF;
-    height: 40px;
-    width: 100px;
-    font-weight: bold;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px solid;
-    color: black;
-}
-
-textarea {
-    width: 400px;
-    height: 120px;
-    line-height: 20px;
-    max-width: 400px;
-}
-
+/* Estilo dos labels */
 form label {
-    margin-left: 20px;
-    color: #FFFFFF;
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Cor cinza escura */
+    font-weight: normal; /* Peso da fonte normal */
+}
+
+/* Estilo dos campos de entrada e textarea */
+input, textarea {
+    width: calc(100% - 40px); /* Ajusta a largura para o padding */
+    padding: 10px;
+    color: #333; /* Texto escuro para legibilidade */
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Borda cinza clara */
+    font-size: 16px;
+}
+
+/* Estilo dos campos de entrada e textarea em foco */
+input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: #ffa500; /* Cor laranja para foco */
+    background-color: #f9f9f9; /* Fundo levemente cinza */
+}
+
+/* Estilo do botão de envio */
+.enviar {
+    background-color: #ff9900; /* Cor laranja, como o botão da Amazon */
+    color: #fff; /* Texto branco para contraste */
+    height: 40px;
+    width: 100%;
     font-weight: bold;
+    border-radius: 4px;
+    border: none; /* Remove a borda padrão */
+    margin-top: 20px; /* Espaço superior para separar dos campos */
+    cursor: pointer; /* Adiciona cursor pointer para interatividade */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo do botão de envio em foco */
+.enviar:hover {
+    background-color: #e68a00; /* Cor laranja escura para hover */
 }
